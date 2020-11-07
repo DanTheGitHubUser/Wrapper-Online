@@ -106,7 +106,7 @@ module.exports = function (req, res, url) {
 			case '/ccold': {
 			title = 'Character Creator';
 			attrs = {
-				data: 'https://wrapper.online/animation/810/go_full.swf', // data: 'cc_.swf',
+				data: 'https://wrapper.online/animation/810/cc.swf', // data: 'cc_.swf',
 				type: 'application/x-shockwave-flash', id: 'char_creator', width: '100%', height: '100%',
 			};
 			params = {
