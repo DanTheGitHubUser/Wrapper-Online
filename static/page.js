@@ -92,7 +92,7 @@ module.exports = function (req, res, url) {
 			};
 			params = {
 				flashvars: {
-					'apiserver': '/', 'storePath': 'http%3A%2F%2Flightspeed.domo.goanimate.com%2Fstore%2F50%2F%3Cstore%3E', 'isEmbed': 1, 'ctc': 'go',
+					'apiserver': '/', 'storePath': 'http://lightspeed.domo.goanimate.com/store/50/<store>', 'isEmbed': 1, 'ctc': 'go',
 					'ut': 60, 'bs': 'default', 'appCode': 'go', 'page': '', 'siteId': 'go', 'lid': 13, 'isLogin': 'Y', 'retut': 1,
 					'clientThemePath': process.env.CLIENT_URL + '/<client_theme>', 'themeId': 'custom', 'tlang': 'en_US',
 					'presaveId': presave, 'goteam_draft_only': 1, 'isWide': 1, 'nextUrl': '/pages/html/list.html',
