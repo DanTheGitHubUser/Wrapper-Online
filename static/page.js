@@ -102,6 +102,25 @@ module.exports = function (req, res, url) {
 			sessions.set({ movieId: presave }, req);
 			break;
 		}
+			
+			case '/cc': {
+			title = 'Character Creator';
+			attrs = {
+				data: 'https://wrapper.online/animation/810/go_full.swf', // data: 'cc_.swf',
+				type: 'application/x-shockwave-flash', id: 'char_creator', width: '100%', height: '100%',
+			};
+			params = {
+				flashvars: {
+					'apiserver': '/', 'storePath': 'http://lightspeed.domo.goanimate.com/store/50/<store>',
+					'clientThemePath': process.env.CLIENT_URL + '/<client_theme>', 'original_asset_id': query['id'] || null,
+					'themeId': 'custom', 'ut': 60, 'bs': 'default', 'appCode': 'go', 'page': '', 'siteId': 'go',
+					'm_mode': 'school', 'isLogin': 'Y', 'isEmbed': 1, 'ctc': 'go', 'tlang': 'en_US',
+				},
+				allowScriptAccess: 'always',
+				movie: process.env.SWF_URL + '/cc.swf', // 'http://localhost/cc.swf'
+			};
+			break;
+		}
 
 		case '/player': {
 			title = 'Video Player';
