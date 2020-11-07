@@ -103,7 +103,7 @@ module.exports = function (req, res, url) {
 			break;
 		}
 			
-			case '/cc': {
+			case '/ccold': {
 			title = 'Character Creator';
 			attrs = {
 				data: 'https://wrapper.online/animation/810/go_full.swf', // data: 'cc_.swf',
@@ -111,7 +111,7 @@ module.exports = function (req, res, url) {
 			};
 			params = {
 				flashvars: {
-					'apiserver': '/', 'storePath': 'http://lightspeed.domo.goanimate.com/store/50/<store>',
+					'apiserver': '/', 'storePath': 'http://lightspeed.domo.goanimate.com/store/810/<store>',
 					'clientThemePath': process.env.CLIENT_URL + '/<client_theme>', 'original_asset_id': query['id'] || null,
 					'themeId': 'custom', 'ut': 60, 'bs': 'default', 'appCode': 'go', 'page': '', 'siteId': 'go',
 					'm_mode': 'school', 'isLogin': 'Y', 'isEmbed': 1, 'ctc': 'go', 'tlang': 'en_US',
