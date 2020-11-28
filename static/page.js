@@ -87,7 +87,7 @@ module.exports = function (req, res, url) {
 				`m-${fUtil[query.noAutosave ? 'getNextFileId' : 'fillNextFileId']('movie-', '.xml')}`;
 			title = 'Video Editor';
 			attrs = {
-				data: 'https://wrapper.online/animation/810/go_full.swf',
+				data: 'https://danthegithubuser.github.io/Wrapper-Online-Assets/animation/810/go_full.swf',
 				type: 'application/x-shockwave-flash', width: '100%', height: '100%',
 			};
 			params = {
@@ -106,7 +106,7 @@ module.exports = function (req, res, url) {
 			case '/ccold': {
 			title = 'Character Creator';
 			attrs = {
-				data: 'https://wrapper.online/animation/810/cc.swf', // data: 'cc_.swf',
+				data: 'https://danthegithubuser.github.io/Wrapper-Online-Assets/animation/810/cc.swf', // data: 'cc_.swf',
 				type: 'application/x-shockwave-flash', id: 'char_creator', width: '100%', height: '100%',
 			};
 			params = {
