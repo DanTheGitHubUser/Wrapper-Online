@@ -87,7 +87,7 @@ module.exports = function (req, res, url) {
 				`m-${fUtil[query.noAutosave ? 'getNextFileId' : 'fillNextFileId']('movie-', '.xml')}`;
 			title = 'Video Editor';
 			attrs = {
-				data: 'https://danthegithubuser.github.io/Wrapper-Online-Assets/animation/810/go_full.swf',
+				data: 'https://danthegithubuser.github.io/Wrapper-Online-Assets/animation/17/go_full.swf',
 				type: 'application/x-shockwave-flash', width: '100%', height: '100%',
 			};
 			params = {
