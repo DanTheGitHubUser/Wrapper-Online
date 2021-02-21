@@ -87,7 +87,7 @@ module.exports = function (req, res, url) {
 				`m-${fUtil[query.noAutosave ? 'getNextFileId' : 'fillNextFileId']('movie-', '.xml')}`;
 			title = 'Video Editor';
 			attrs = {
-				data: 'https://danthegithubuser.github.io/Wrapper-Online-Assets/animation/17/go_full.swf',
+				data: 'https://danthegithubuser.github.io/Wrapper-Online-Assets/animation/810/go_full.swf',
 				type: 'application/x-shockwave-flash', width: '100%', height: '100%',
 			};
 			params = {
@@ -103,24 +103,27 @@ module.exports = function (req, res, url) {
 			break;
 		}
 			
-			case '/ccold': {
-			title = 'Character Creator';
+		case '/go_fullolder': {
+			let presave = query.movieId && query.movieId.startsWith('m') ? query.movieId :
+				`m-${fUtil[query.noAutosave ? 'getNextFileId' : 'fillNextFileId']('movie-', '.xml')}`;
+			title = 'Video Editor';
 			attrs = {
-				data: 'https://danthegithubuser.github.io/Wrapper-Online-Assets/animation/810/cc.swf', // data: 'cc_.swf',
-				type: 'application/x-shockwave-flash', id: 'char_creator', width: '100%', height: '100%',
+				data: 'https://danthegithubuser.github.io/Wrapper-Online-Assets/animation/17/go_full.swf',
+				type: 'application/x-shockwave-flash', width: '100%', height: '100%',
 			};
 			params = {
 				flashvars: {
-					'apiserver': '/', 'storePath': 'http://lightspeed.domo.goanimate.com/store/810/<store>',
-					'clientThemePath': process.env.CLIENT_URL + '/<client_theme>', 'original_asset_id': query['id'] || null,
-					'themeId': 'custom', 'ut': 60, 'bs': 'default', 'appCode': 'go', 'page': '', 'siteId': 'go',
-					'm_mode': 'school', 'isLogin': 'Y', 'isEmbed': 1, 'ctc': 'go', 'tlang': 'en_US',
+					'apiserver': '/', 'storePath': 'http://lightspeed.domo.goanimate.com/store/50/<store>', 'isEmbed': 1, 'ctc': 'go',
+					'ut': 60, 'bs': 'default', 'appCode': 'go', 'page': '', 'siteId': 'go', 'lid': 13, 'isLogin': 'Y', 'retut': 1,
+					'clientThemePath': process.env.CLIENT_URL + '/<client_theme>', 'themeId': 'custom', 'tlang': 'en_US',
+					'presaveId': presave, 'goteam_draft_only': 1, 'isWide': 1, 'nextUrl': '/pages/html/list.html',
 				},
 				allowScriptAccess: 'always',
-				movie: process.env.SWF_URL + '/cc.swf', // 'http://localhost/cc.swf'
 			};
+			sessions.set({ movieId: presave }, req);
 			break;
-		}
+		}			
+			
 
 		case '/player': {
 			title = 'Video Player';
